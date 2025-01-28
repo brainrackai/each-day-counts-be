@@ -116,6 +116,19 @@ The application can be configured through `application.properties` or environmen
 - `JWT_SECRET`: Secret key for JWT token generation
 - `JWT_EXPIRATION`: Token expiration time in milliseconds
 
+### CORS Configuration
+
+The application is configured to accept requests from the following origins in development:
+- `http://localhost:3000` (React default port)
+- `http://localhost:4200` (Angular default port)
+
+To add additional origins or modify CORS settings, update the `CorsConfig.java` file.
+
+For production, make sure to:
+1. Replace the allowed origins with your production domain
+2. Remove any development-only origins
+3. Consider implementing more restrictive CORS policies
+
 ## 🤝 Contributing
 
 1. Fork the repository
